@@ -13,6 +13,7 @@
 		FF6B921124BC13DF001C1DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6B920F24BC13DF001C1DD6 /* Main.storyboard */; };
 		FF6B921324BC13E1001C1DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF6B921224BC13E1001C1DD6 /* Assets.xcassets */; };
 		FF6B921624BC13E1001C1DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6B921424BC13E1001C1DD6 /* LaunchScreen.storyboard */; };
+		FFEF45C22505F1DE001D688E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEF45C12505F1DE001D688E /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		FF6B921224BC13E1001C1DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF6B921524BC13E1001C1DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF6B921724BC13E1001C1DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFEF45C12505F1DE001D688E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FFEF45C32505F2D6001D688E /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +59,7 @@
 		FF6B920824BC13DF001C1DD6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				FF6B921D24BC2B78001C1DD6 /* Extension */,
+				FFEF45C02505F1BC001D688E /* Extensions */,
 				FF6B920924BC13DF001C1DD6 /* AppDelegate.swift */,
 				FF6B920B24BC13DF001C1DD6 /* SceneDelegate.swift */,
 				FF6B920D24BC13DF001C1DD6 /* ViewController.swift */,
@@ -64,15 +67,17 @@
 				FF6B921224BC13E1001C1DD6 /* Assets.xcassets */,
 				FF6B921424BC13E1001C1DD6 /* LaunchScreen.storyboard */,
 				FF6B921724BC13E1001C1DD6 /* Info.plist */,
+				FFEF45C32505F2D6001D688E /* BridgingHeader.h */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		FF6B921D24BC2B78001C1DD6 /* Extension */ = {
+		FFEF45C02505F1BC001D688E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FFEF45C12505F1DE001D688E /* StringExtension.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFEF45C22505F1DE001D688E /* StringExtension.swift in Sources */,
 				FF6B920E24BC13DF001C1DD6 /* ViewController.swift in Sources */,
 				FF6B920A24BC13DF001C1DD6 /* AppDelegate.swift in Sources */,
 				FF6B920C24BC13DF001C1DD6 /* SceneDelegate.swift in Sources */,
@@ -300,6 +306,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yooo.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Extension/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +324,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yooo.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Extension/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
